@@ -5,7 +5,7 @@ using UnityEngine;
 public class AmmoBehavior : MonoBehaviour
 {
     public float speed;
-    public float direction;
+    public Vector3 direction;
     public float damage;
 
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class AmmoBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(0, 0, 1) * speed * Time.deltaTime;
+        transform.Translate(direction * speed * Time.deltaTime);
         
     }
 }
